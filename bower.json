@@ -1,0 +1,30 @@
+{
+  "name": "deep-merge",
+  "main": "deep-merge.js",
+  "version": "0.0.1",
+  "authors": [
+    "eclifford <ericgclifford@gmail.com>"
+  ],
+  "description": "recursive deep merge for objects and arrays",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "javascript",
+    "merge",
+    "object",
+    "array",
+    "deepmerge"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/eclifford/deep-merge",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
