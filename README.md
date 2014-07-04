@@ -1,7 +1,6 @@
 # n-deep-merge
 
-[![Build Status](https://travis-ci.org/eclifford/bronson.svg?branch=master)](https://travis-ci.org/eclifford/bronson)
-[![Coverage Status](https://coveralls.io/repos/eclifford/bronson/badge.png?branch=master)](https://coveralls.io/r/eclifford/bronson?branch=master)
+[![Build Status](https://travis-ci.org/eclifford/n-deep-merge.svg?branch=master)](https://travis-ci.org/eclifford/n-deep-merge)
 
 ## What is n-deep-merge?
 
