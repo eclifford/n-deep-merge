@@ -1,11 +1,11 @@
-# Deep Merge
+# n-deep-merge
 
 [![Build Status](https://travis-ci.org/eclifford/bronson.svg?branch=master)](https://travis-ci.org/eclifford/bronson)
 [![Coverage Status](https://coveralls.io/repos/eclifford/bronson/badge.png?branch=master)](https://coveralls.io/r/eclifford/bronson?branch=master)
 
-## What is deepmerge?
+## What is n-deep-merge?
 
-Deepmerge is a CommonJS/AMD/Window compatible function for deep merging of any number
+**n-deep-merge** is a CommonJS/AMD/Window compatible function for deep merging of any number
 of objects and arrays.  
 
 ### Features
@@ -41,7 +41,7 @@ var obj = merge(foo, baz);
 #### More Complex Example
 
 ```javascript
-var merge = require('deep-merge');
+var merge = require('n-deep-merge');
 
 var foo = {
   name: 'foo'

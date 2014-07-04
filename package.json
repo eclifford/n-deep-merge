@@ -1,8 +1,8 @@
 {
-  "name": "deep-merge",
+  "name": "n-deep-merge",
   "version": "0.0.1",
-  "description": "recursive deep merge for objects and arrays",
-  "main": "deep-merge.js",
+  "description": "deep merge a collection of javascript objects and arrays",
+  "main": "merge.js",
   "directories": {
     "test": "test"
   },

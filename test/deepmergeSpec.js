@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var deepmerge = require('../deep-merge');
+var merge = require('../merge');
 
 describe("deep-merge", function() {
   it("should be able to merge properties", function() {
@@ -11,7 +11,7 @@ describe("deep-merge", function() {
       baz: 'baz'
     };
 
-    var mergedObj = deepmerge(obj1, obj2);
+    var mergedObj = merge(obj1, obj2);
     expect(mergedObj).to.deep.equal({
       foo: 'foo',
       baz: 'baz'
@@ -31,7 +31,7 @@ describe("deep-merge", function() {
       bar: 'bar'
     };
 
-    var mergedObj = deepmerge(obj1, obj2, obj3);
+    var mergedObj = merge(obj1, obj2, obj3);
     expect(mergedObj).to.deep.equal({
       foo: 'foo',
       baz: 'baz',
@@ -52,7 +52,7 @@ describe("deep-merge", function() {
       }
     };
 
-    var mergedObj = deepmerge(obj1, obj2);
+    var mergedObj = merge(obj1, obj2);
     expect(mergedObj).to.deep.equal({
       foo: {
         name: 'foo',
@@ -91,7 +91,7 @@ describe("deep-merge", function() {
       }
     };
 
-    var mergedObjs = deepmerge(obj1, obj2);
+    var mergedObjs = merge(obj1, obj2);
     expect(mergedObjs).to.deep.equal({
       foo: 'foo',
       bar: true,
@@ -119,12 +119,12 @@ describe("deep-merge", function() {
     var arr1 = [1, 2, 3];
     var arr2 = [4, 5, 6];
 
-    var mergedArrays = deepmerge(arr1, arr2);
+    var mergedArrays = merge(arr1, arr2);
     expect(mergedArrays).to.deep.equal([1, 2, 3, 4, 5, 6]);
 
     arr3 = [1, 4, 7];
     arr4 = [2, 4, 7];
-    var mergedArrays2 = deepmerge(arr3, arr4);
+    var mergedArrays2 = merge(arr3, arr4);
     expect(mergedArrays2).to.deep.equal([1, 4, 7, 2]);
   });
 });

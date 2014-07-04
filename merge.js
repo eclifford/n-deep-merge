@@ -1,5 +1,5 @@
 /*!
- * deepmerge - recursive deep merge for objects and arrays
+ * n-deep-merge - recursive deep merge for objects and arrays
  * (c) 2014 Eric Clifford <ericgclifford@gmail.com>
  * MIT Licensed.
  *

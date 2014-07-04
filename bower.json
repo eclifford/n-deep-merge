@@ -1,11 +1,11 @@
 {
-  "name": "deep-merge",
-  "main": "deep-merge.js",
+  "name": "n-deep-merge",
+  "main": "merge.js",
   "version": "0.0.1",
   "authors": [
     "eclifford <ericgclifford@gmail.com>"
   ],
-  "description": "recursive deep merge for objects and arrays",
+  "description": "deep merge a collection of javascript objects and arrays",
   "moduleType": [
     "amd",
     "globals",
