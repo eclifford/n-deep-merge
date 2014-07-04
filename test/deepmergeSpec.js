@@ -18,6 +18,27 @@ describe("deep-merge", function() {
     });
   });
 
+  it("should able to merge properties from multiple objects", function() {
+    var obj1 = {
+      foo: 'foo'
+    };
+
+    var obj2 = {
+      baz: 'baz'
+    };
+
+    var obj3 = {
+      bar: 'bar'
+    };
+
+    var mergedObj = deepmerge(obj1, obj2, obj3);
+    expect(mergedObj).to.deep.equal({
+      foo: 'foo',
+      baz: 'baz',
+      bar: 'bar'
+    });
+  });
+
   it("should be able to merge objects", function() {
     var obj1 = {
       foo: {
@@ -38,6 +59,60 @@ describe("deep-merge", function() {
         type: 'rubbish'
       }
     });
+  });
+
+  it("should be able to merge complex objects with arrays", function() {
+    var obj1 = {
+      foo: 'foo',
+      baz: {
+        name: 'baz',
+        started: false,
+        zones: [
+          {
+            name: 'a',
+            width: 100,
+            height: 1000
+          }
+        ]
+      }
+    };
+
+    var obj2 = {
+      bar: true,
+      baz: {
+        started: true,
+        zones: [
+          {
+            name: 'b',
+            width: 200,
+            height: 1000
+          }
+        ]
+      }
+    };
+
+    var mergedObjs = deepmerge(obj1, obj2);
+    expect(mergedObjs).to.deep.equal({
+      foo: 'foo',
+      bar: true,
+      baz: {
+        name: 'baz',
+        started: true,
+        zones: [
+          {
+            name: 'a',
+            width: 100,
+            height: 1000
+          },
+          {
+            name: 'b',
+            width: 200,
+            height: 1000
+          }
+        ]
+      }
+    });
+
   });
 
   it("should be able to merge arrays", function() {
