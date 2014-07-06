@@ -17,7 +17,7 @@ of objects and arrays.
 #### Simple Object Merge
 
 ```javascript
-var merge = require('deep-merge');
+var merge = require('n-deep-merge');
 
 var foo = {
   name: 'foo'
