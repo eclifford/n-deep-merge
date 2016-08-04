@@ -130,8 +130,8 @@ describe("deep-merge", function() {
 
   it('should merge properties with the number 0', function() {
     var obj1 = {foo: 0, bar: true},
-      obj2 = {baz: 1};
+      obj2 = {baz: 1, test: ''};
     var obj3 = merge(obj2, obj1);
-    expect(obj3).to.deep.equal({foo: 0, bar: true, baz: 1});
+    expect(obj3).to.deep.equal({foo: 0, bar: true, baz: 1, test: ''});
   });
 });
