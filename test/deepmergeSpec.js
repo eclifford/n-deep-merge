@@ -127,4 +127,11 @@ describe("deep-merge", function() {
     var mergedArrays2 = merge(arr3, arr4);
     expect(mergedArrays2).to.deep.equal([1, 4, 7, 2]);
   });
+
+  it('should merge properties with the number 0', function() {
+    var obj1 = {foo: 0, bar: true},
+      obj2 = {baz: 1};
+    var obj3 = merge(obj2, obj1);
+    expect(obj3).to.deep.equal({foo: 0, bar: true, baz: 1});
+  });
 });
