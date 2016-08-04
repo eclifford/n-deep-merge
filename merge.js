@@ -21,8 +21,10 @@
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
-      if (!source && typeof source !== 'boolean')
+      if (!source && !~['boolean', 'string', 'number'].indexOf(typeof source)) {
         continue;
+      }
+        
 
       var isObj = typeof source === 'object',
           isArray = toString.call(source) == '[object Array]';
