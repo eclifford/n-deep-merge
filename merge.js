@@ -17,7 +17,7 @@
   }
 }(this, function(root) {
 
-  deepmerge = function (dest) {
+  function deepmerge(dest) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
@@ -37,14 +37,14 @@
       } else if (isObj) {
         dest = dest || {};
         for (var key in source) {
-          dest[key] = this.deepmerge(dest[key], source[key]);
+          dest[key] = deepmerge(dest[key], source[key]);
         }
       } else {
         dest = source;
       }
     }
     return dest;
-  };
+  }
 
   return deepmerge;
 }));
