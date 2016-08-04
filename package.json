@@ -1,6 +1,6 @@
 {
   "name": "n-deep-merge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "deep merge a collection of javascript objects and arrays",
   "main": "merge.js",
   "directories": {
