@@ -17,12 +17,14 @@
   }
 }(this, function(root) {
 
-  deepmerge = function (dest) {
+  function deepmerge(dest) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
-      if (!source && typeof source !== 'boolean')
+      if (!source && !~['boolean', 'string', 'number'].indexOf(typeof source)) {
         continue;
+      }
+        
 
       var isObj = typeof source === 'object',
           isArray = toString.call(source) == '[object Array]';
@@ -37,14 +39,14 @@
       } else if (isObj) {
         dest = dest || {};
         for (var key in source) {
-          dest[key] = this.deepmerge(dest[key], source[key]);
+          dest[key] = deepmerge(dest[key], source[key]);
         }
       } else {
         dest = source;
       }
     }
     return dest;
-  };
+  }
 
   return deepmerge;
 }));
