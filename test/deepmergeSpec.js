@@ -128,7 +128,7 @@ describe("deep-merge", function() {
     expect(mergedArrays2).to.deep.equal([1, 4, 7, 2]);
   });
 
-  it('should merge properties with the number 0', function() {
+  it('should merge properties with the number 0 or an empty string', function() {
     var obj1 = {foo: 0, bar: true},
       obj2 = {baz: 1, test: ''};
     var obj3 = merge(obj2, obj1);
