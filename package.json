@@ -6,6 +6,10 @@
   "directories": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclifford/n-deep-merge.git"
+  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
